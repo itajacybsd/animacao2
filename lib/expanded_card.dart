@@ -58,25 +58,28 @@ class _ExpandedCardState extends State<ExpandedCard> {
             ),
           ),
         ),
-        AnimatedAlign(
-          alignment: Alignment.center,
-          duration: Duration(seconds: 1),
-          heightFactor: widget.isOpen ? 1 : 0,
-          child: Container(
-            padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 5),
-            child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  widget.isOpen = !widget.isOpen;
-                });
-              },
-              child: Text(
-                // widget.text,
-                widget.isOpen ? widget.text : '',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
+        ExpansionTile(title: Text('teste')),
+        ClipRect(
+          child: AnimatedAlign(
+            alignment: Alignment.center,
+            duration: Duration(seconds: 1),
+            heightFactor: widget.isOpen ? 1 : 0,
+            child: Container(
+              padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 5),
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    widget.isOpen = !widget.isOpen;
+                  });
+                },
+                child: Text(
+                  widget.text, // sem condição
+                  // widget.isOpen ? widget.text : '', // com condição
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
