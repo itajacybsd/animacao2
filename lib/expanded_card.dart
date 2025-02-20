@@ -58,7 +58,6 @@ class _ExpandedCardState extends State<ExpandedCard> {
             ),
           ),
         ),
-        ExpansionTile(title: Text('teste')),
         ClipRect(
           child: AnimatedAlign(
             alignment: Alignment.center,

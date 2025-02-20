@@ -12,7 +12,7 @@ class MyAnimation2 extends StatelessWidget {
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Exercício 2'),
+          title: const Text('Exercício de animação 2'),
           backgroundColor: Colors.blueAccent,
         ),
         body: const HomePage(),

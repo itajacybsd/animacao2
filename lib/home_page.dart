@@ -9,7 +9,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool _isOpen = false;
+  // bool _isOpen = false;
   double turns = 0;
   
 
